@@ -58,9 +58,9 @@ namespace TP_Dojo.Controllers
             {
                 if (vm.IdSelectedArme != null)
                 {
-                    var samouraisAvecMonArme = db.Samourais.Where(x => x.Arme.Id == vm.IdSelectedArme).ToList();
+                    var samouraisWithArme = db.Samourais.Where(x => x.Arme.Id == vm.IdSelectedArme).ToList();
 
-                    foreach (var item in samouraisAvecMonArme)
+                    foreach (var item in samouraisWithArme)
                     {
                         item.Arme = null;
                         db.Entry(item).State = EntityState.Modified;
@@ -170,7 +170,7 @@ namespace TP_Dojo.Controllers
                 vm.IdSelectedArme = vm.Samourai.Arme.Id;
             }
 
-            vm.ArtMartials.Add(new ArtMartial() { Nom = "Aucun" });
+            vm.ArtMartials.Add(new ArtMartial() { Nom = "None" });
             vm.ArtMartials.AddRange(db.ArtMartials.ToList());
             vm.ArtMartialsIds = vm.Samourai.ArtMartials.Select(x => x.Id).ToList();
 
