@@ -13,7 +13,7 @@ namespace BO
         public virtual List<ArtMartial> ArtMartials { get; set; } = new List<ArtMartial>();
 
         [NotMapped]
-        [DisplayName("Mon super potentiel")]
+        [DisplayName("Potentiel du Maitre Shu")]
         public int Potentiel
         {
             get
