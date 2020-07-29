@@ -188,7 +188,7 @@
     <Content Include="Views\Samourais\Details.cshtml" />
     <Content Include="Views\Samourais\Edit.cshtml" />
     <Content Include="Views\Samourais\Index.cshtml" />
-    <Content Include="Views\Samourais\_CreatDetailIndex.cshtml" />
+    <Content Include="Views\Samourais\_DeleteDetails.cshtml" />
     <Content Include="Views\Armes\_DeleteDetails.cshtml" />
     <Content Include="Views\Armes\_CreateEdit.cshtml" />
     <Content Include="Views\Samourais\_CreateEdit.cshtml" />
