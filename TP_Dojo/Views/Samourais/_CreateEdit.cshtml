@@ -1,6 +1,6 @@
 ﻿@model TP_Dojo.Models.SamouraiVM
 
-@Html.ValidationSummary(true, "", new { @class = "text-danger" })
+@Html.ValidationSummary(true, "", new { @class = "alert alert-danger" })
 <div class="form-group">
     @Html.LabelFor(model => model.Samourai.Force, htmlAttributes: new { @class = "control-label col-md-2" })
     <div class="col-md-10">
