@@ -1,9 +1,6 @@
 namespace TP_Dojo.Migrations
 {
-    using System;
-    using System.Data.Entity;
     using System.Data.Entity.Migrations;
-    using System.Linq;
 
     internal sealed class Configuration : DbMigrationsConfiguration<TP_Dojo.Data.TP_DojoContext>
     {

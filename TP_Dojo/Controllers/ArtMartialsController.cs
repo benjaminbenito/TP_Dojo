@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
+﻿using BO;
 using System.Data.Entity;
 using System.Linq;
-using System.Threading.Tasks;
 using System.Net;
-using System.Web;
 using System.Web.Mvc;
-using BO;
 using TP_Dojo.Data;
 
 namespace TP_Dojo.Controllers
