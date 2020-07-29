@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BO;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
@@ -14,15 +15,17 @@ namespace TP_Dojo.Data
         // automatically whenever you change your model schema, please use data migrations.
         // For more information refer to the documentation:
         // http://msdn.microsoft.com/en-us/data/jj591621.aspx
-    
-        public TP_DojoContext() : base("name=TP_DojoContext")
-        {
-        }
 
         public System.Data.Entity.DbSet<BO.Arme> Armes { get; set; }
 
         public System.Data.Entity.DbSet<BO.Samourai> Samourais { get; set; }
 
         public System.Data.Entity.DbSet<BO.ArtMartial> ArtMartials { get; set; }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Samourai>().HasMany(x => x.ArtMartials).WithMany();
+            base.OnModelCreating(modelBuilder);
+        }
     }
 }

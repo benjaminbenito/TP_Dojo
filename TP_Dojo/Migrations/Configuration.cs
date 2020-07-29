@@ -10,7 +10,6 @@ namespace TP_Dojo.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
-            ContextKey = "TP_Dojo.Data.TP_DojoContext";
         }
 
         protected override void Seed(TP_Dojo.Data.TP_DojoContext context)

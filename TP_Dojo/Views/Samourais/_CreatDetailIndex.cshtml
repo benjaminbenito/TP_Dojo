@@ -1,30 +1,61 @@
 ﻿@model BO.Samourai
 
-<h4>Samourai</h4>
-<hr />
-<dl class="dl-horizontal">
-    <dt>
-        @Html.DisplayNameFor(model => model.Force)
-    </dt>
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Force)
+        </dt>
 
-    <dd>
-        @Html.DisplayFor(model => model.Force)
-    </dd>
+        <dd>
+            @Html.DisplayFor(model => model.Force)
+        </dd>
 
-    <dt>
-        @Html.DisplayNameFor(model => model.Nom)
-    </dt>
+        <dt>
+            @Html.DisplayNameFor(model => model.Nom)
+        </dt>
 
-    <dd>
-        @Html.DisplayFor(model => model.Nom)
-    </dd>
+        <dd>
+            @Html.DisplayFor(model => model.Nom)
+        </dd>
 
-    <dt>
-        @Html.DisplayNameFor(model => model.Arme.Nom)
-    </dt>
+        <dt>
+            @Html.DisplayNameFor(model => model.Arme)
+        </dt>
+        <dd>
+            @if (Model.Arme == null)
+            {
+                <i>Aucune arme</i>
+            }
+            else
+            {
+                @Html.DisplayFor(model => model.Arme.Nom)
+            }
+        </dd>
 
-    <dd>
-        @Html.DisplayFor(model => model.Arme.Nom)
-    </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ArtMartials)
+        </dt>
 
-</dl>
+        <dd>
+            @if (Model.ArtMartials.Any())
+            {
+                <ul>
+                    @foreach (BO.ArtMartial martialart in Model.ArtMartials)
+                    {
+                        <li>@martialart.Nom</li>
+                    }
+                </ul>
+            }
+            else
+            {
+                <i>Aucun art martial pratiqué</i>
+            }
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Potentiel)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Potentiel)
+        </dd>
+
+
+    </dl>

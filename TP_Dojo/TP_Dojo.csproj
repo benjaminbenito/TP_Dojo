@@ -127,19 +127,20 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\ArmesController.cs" />
+    <Compile Include="Controllers\ArtMartialsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\SamouraisController.cs" />
-    <Compile Include="Data\TP_DojoContext.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202007271211026_InitialCreate.cs" />
-    <Compile Include="Migrations\202007271211026_InitialCreate.Designer.cs">
-      <DependentUpon>202007271211026_InitialCreate.cs</DependentUpon>
+    <Compile Include="Migrations\202007290855265_dddd.cs" />
+    <Compile Include="Migrations\202007290855265_dddd.Designer.cs">
+      <DependentUpon>202007290855265_dddd.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\SamouraiVM.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TP_DojoContext.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />
@@ -191,6 +192,11 @@
     <Content Include="Views\Armes\_DeleteDetails.cshtml" />
     <Content Include="Views\Armes\_CreateEdit.cshtml" />
     <Content Include="Views\Samourais\_CreateEdit.cshtml" />
+    <Content Include="Views\ArtMartials\Create.cshtml" />
+    <Content Include="Views\ArtMartials\Delete.cshtml" />
+    <Content Include="Views\ArtMartials\Details.cshtml" />
+    <Content Include="Views\ArtMartials\Edit.cshtml" />
+    <Content Include="Views\ArtMartials\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -215,8 +221,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202007271211026_InitialCreate.resx">
-      <DependentUpon>202007271211026_InitialCreate.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202007290855265_dddd.resx">
+      <DependentUpon>202007290855265_dddd.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
