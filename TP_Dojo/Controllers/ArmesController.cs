@@ -102,7 +102,7 @@ namespace TP_Dojo.Controllers
             List<int> ids = db.Samourais.Include(x => x.Arme).Where(x => x.Arme != null).Select(x => x.Arme.Id).ToList();
             if (ids.Contains(id.Value))
             {
-                ModelState.AddModelError("", "Cette arme ne peut pas être supprimé parce qu'elle appartient au samourai \"" + db.Samourais.FirstOrDefault(x => x.Arme.Id == id.Value).Nom + "\"");
+                ModelState.AddModelError("", "!!! Warning !!! Cette arme ne peut pas être supprimé elle appartient deja au samourai \"" + db.Samourais.FirstOrDefault(x => x.Arme.Id == id.Value).Nom + "\"");
                 return View();
             }
             Arme arme = db.Armes.Find(id);
